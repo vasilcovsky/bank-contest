@@ -19,12 +19,12 @@ To explain the complexity bear in mind  that if you have 2 consecutive transacti
 and you try to execute second transaction before the first transaction in your parallel program, it may fail because B don’t have money.
 
 Another example is that in the following situation: 
-  A->B
-  B->C
-  C->D
+  * A->B
+  * B->C
+  * C->D
 Transactions should be executed consecutively.
 
 At the same time the following transactions can be executed in parallel:
-  E->F
-  K->J
-  R->F
+  * E->F
+  * K->J
+  * R->F
