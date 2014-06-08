@@ -16,12 +16,15 @@ You need to write a multithreaded program that will process those transactions f
 To explain the complexity bear in mind  that if you have 2 consecutive transactions:
   1. Transfer 100$ from account A to account B
   2. Transfer 100$ from account B to account A
+
+  
 and you try to execute second transaction before the first transaction in your parallel program, it may fail because B don’t have money.
 
 Another example is that in the following situation: 
   * A->B
   * B->C
   * C->D
+
 Transactions should be executed consecutively.
 
 At the same time the following transactions can be executed in parallel:
